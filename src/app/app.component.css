@@ -1,18 +1,15 @@
-table {
-  width: 100%;
+.homepagePollCard {
+  max-width: 400px;
+  margin: 20px;
+  border: black;
 }
-
-.example-h2 {
-  margin: 10px;
-}
-
-.example-section {
+.cards {
   display: flex;
-  align-content: center;
-  align-items: center;
-  height: 60px;
+  justify-content: center;
+  flex-direction: column;
 }
-
-.example-margin {
-  margin: 10px;
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,1),
+  0 1px 1px 0 rgba(0,0,0,1),
+  0 1px 3px 0 rgba(0,0,0,1);
 }
