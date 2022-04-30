@@ -1,0 +1,20 @@
+<head>
+  <title>Homepage</title>
+</head>
+<h1>Latest Polls</h1>
+<div class="cards">
+  <mat-card class="homepagePollCard" *ngFor="let poll of latestPools">
+    <mat-card-header>
+      <mat-card-title>{{poll.title}}</mat-card-title>
+      <mat-card-subtitle>by {{poll.creator}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{poll.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="goToPoll(poll.id)">Vote</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,10 @@
+<p>{{poll.id}}</p>
+<p>{{poll.title}}</p>
+<p>{{poll.description}}</p>
+<form>
+<mat-slider max="10" min="1" step="1" thumbLabel="true"></mat-slider>
+<p>Comment:</p>
+  <input>
+  <p><button mat-raised-button (click)="vote(1)" >Vote!</button></p>
+</form>
+
