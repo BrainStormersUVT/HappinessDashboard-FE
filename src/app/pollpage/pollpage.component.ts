@@ -8,18 +8,19 @@ import {Poll} from "../classes/Poll";
   styleUrls: ['./pollpage.component.css']
 })
 export class PollpageComponent implements OnInit {
-  id:string | null | undefined
-  poll=new Poll(0, "", "", "", 0 )
-  constructor(private arouter: ActivatedRoute, private router:Router) { }
-
-  ngOnInit(): void {
-    this.id=this.arouter.snapshot.paramMap.get('id');
+  id:string | null
+  poll: Poll
+  constructor(private arouter: ActivatedRoute, private router:Router) {
+    this.id=this.arouter.snapshot.paramMap.get('id')
     this.poll=this.getPoll(this.id);
   }
+
+  ngOnInit(): void {
+  }
 getPoll(id:string | null) {
-    let polls=[new Poll(1, "Poll1", "description1", "29-04-2022", 0),
-      new Poll(2, "Poll2", "description2", "29-04-2022", 1),
-      new Poll(3, "Poll3", "description3", "29-04-2022", 2),
+    let polls=[new Poll(0, "Poll1", "description1", "29-04-2022", 0),
+      new Poll(1, "Poll2", "description2", "29-04-2022", 1),
+      new Poll(2, "Poll3", "description3", "29-04-2022", 2),
     ]
   return polls[parseInt(<string>id, 10)];
 }

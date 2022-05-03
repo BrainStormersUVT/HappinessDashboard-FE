@@ -1,10 +1,20 @@
-<p>{{poll.id}}</p>
-<p>{{poll.title}}</p>
-<p>{{poll.description}}</p>
+<app-navbar></app-navbar>
+<div style="margin: 100px; padding: 100px">
+<h1>{{poll.title}}</h1>
+<h2>created by {{poll.creator}}</h2>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Description
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  {{poll.description}}
+</mat-expansion-panel>
+
 <form>
-<mat-slider max="10" min="1" step="1" thumbLabel="true"></mat-slider>
+  <p>Sad <mat-slider max="10" min="1" step="1" thumbLabel="true"></mat-slider> Happy</p>
 <p>Comment:</p>
   <input>
   <p><button mat-raised-button (click)="vote(1)" >Vote!</button></p>
 </form>
-
+</div>

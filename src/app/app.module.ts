@@ -13,11 +13,18 @@ import { CreatepollpageComponent } from './createpollpage/createpollpage.compone
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component'
 import {MatSliderModule} from "@angular/material/slider";
+import { NavbarComponent } from './navbar/navbar.component';
+import {PaginatorModule} from "primeng/paginator";
+import {AutoCompleteModule} from "primeng/autocomplete";
+import {MDBBootstrapModule} from "angular-bootstrap-md";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatIconModule} from "@angular/material/icon";
 
 const routes: Routes = [{path: 'home', component: HomepageComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: 'poll', component: PollpageComponent},
-  {path:'votes', component:VotespageComponent}
+  {path:'votes', component:VotespageComponent},
+  {path:'addpoll', component:CreatepollpageComponent}
   ];
 
 @NgModule({
@@ -29,6 +36,8 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     CreatepollpageComponent,
     RegisterComponent,
     LoginComponent,
+    NavbarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,12 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     MatButtonModule,
     MatCardModule,
     RouterModule.forRoot(routes),
-    MatSliderModule
+    MatSliderModule,
+    PaginatorModule,
+    AutoCompleteModule,
+    MDBBootstrapModule.forRoot(),
+    MatExpansionModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

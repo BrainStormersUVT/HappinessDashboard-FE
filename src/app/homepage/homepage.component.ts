@@ -9,10 +9,10 @@ import {Router} from "@angular/router";
 })
 export class HomepageComponent implements OnInit {
   ngOnInit(): void {
-    console.log("testn")
+
   }
   title="Homepage"
-  latestPools : Poll[]
+  latestPolls : Poll[]
   getLatestPolls(){
     return [new Poll(1, "Poll1", "description1", "29-04-2022", 0),
       new Poll(2, "Poll2", "description2", "29-04-2022", 1),
@@ -20,9 +20,13 @@ export class HomepageComponent implements OnInit {
     ];
   }
   constructor(private router : Router) {
-    this.latestPools=this.getLatestPolls()
+    this.latestPolls=this.getLatestPolls()
   }
   goToPoll(id:any) {
   this.router.navigate(['/poll', {id : id}])
+  }
+
+  goToPollAdd() {
+    this.router.navigate(['/addpoll'])
   }
 }

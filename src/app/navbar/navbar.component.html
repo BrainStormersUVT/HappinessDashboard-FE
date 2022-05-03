@@ -1,0 +1,31 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-primary" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="/">BrainStormers Polls</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <form class="form-inline waves-light" mdbWavesEffect>
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search poll">
+      </div>
+    </form>
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="user"></mdb-icon> {{user}}<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect (click)="goToPollAdd()">Create poll</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+        </div>
+      </li>
+    </ul>
+
+  </links>
+
+</mdb-navbar>

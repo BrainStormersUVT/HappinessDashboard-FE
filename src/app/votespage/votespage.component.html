@@ -1,1 +1,13 @@
-<p>to be implemented</p>
+<app-navbar></app-navbar>
+<div style="max-width: 1000px">
+  <canvas mdbChart
+          [chartType]="chartType"
+          [datasets]="chartDatasets"
+          [labels]="chartLabels"
+          [colors]="chartColors"
+          [options]="chartOptions"
+          [legend]="true"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+  </canvas>
+</div>
