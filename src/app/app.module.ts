@@ -19,6 +19,7 @@ import {AutoCompleteModule} from "primeng/autocomplete";
 import {MDBBootstrapModule} from "angular-bootstrap-md";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatIconModule} from "@angular/material/icon";
+import {HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [{path: 'home', component: HomepageComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -50,7 +51,8 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     AutoCompleteModule,
     MDBBootstrapModule.forRoot(),
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
