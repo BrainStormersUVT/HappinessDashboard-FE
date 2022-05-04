@@ -1,1 +1,9 @@
-<p>createpollpage works!</p>
+<app-navbar></app-navbar>
+<div style="margin: 20px">
+  <form>
+<p>Title Poll: <input #title></p>
+<p>Description: </p>
+<p><input #description></p>
+    <button mat-raised-button (click)="createPoll(title.value, description.value)">Create poll</button>
+  </form>
+</div>

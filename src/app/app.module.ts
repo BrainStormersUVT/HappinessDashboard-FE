@@ -25,7 +25,9 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: 'poll', component: PollpageComponent},
   {path:'votes', component:VotespageComponent},
-  {path:'addpoll', component:CreatepollpageComponent}
+  {path:'addpoll', component:CreatepollpageComponent},
+  {path:'login', component:LoginComponent},
+  {path:'register', component:RegisterComponent}
   ];
 
 @NgModule({

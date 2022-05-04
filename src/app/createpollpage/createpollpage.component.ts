@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+
 
 
 @Component({
@@ -8,12 +8,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./createpollpage.component.css']
 })
 export class CreatepollpageComponent implements OnInit {
-
   constructor() {
 
   }
 
   ngOnInit(): void {
   }
-
+createPoll(title: string, description:string){
+console.log("Title: "+title+"\nDescription:"+description)
+}
 }

@@ -1,1 +1,10 @@
-<p>register works!</p>
+<app-navbar></app-navbar>
+<div style="margin: 20px">
+  <form>
+    <p>Username: <input #username></p>
+    <p>Password: <input #password></p>
+    <p>Email: <input #email></p>
+    <button mat-raised-button (click)="register(username.value, password.value, email.value)">Register</button>
+  </form>
+</div>
+

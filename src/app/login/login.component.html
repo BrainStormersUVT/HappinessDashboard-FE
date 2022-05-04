@@ -1,1 +1,8 @@
-<p>login works!</p>
+<app-navbar></app-navbar>
+<div style="margin: 20px">
+  <form>
+    <p>Username: <input #username></p>
+    <p>Password: <input #password></p>
+    <button mat-raised-button (click)="login(username.value, password.value)">Login</button>
+  </form>
+</div>
