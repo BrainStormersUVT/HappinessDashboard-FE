@@ -20,6 +20,8 @@ import {MDBBootstrapModule} from "angular-bootstrap-md";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
+import {ChartModule} from "primeng/chart";
+import {CalendarModule} from "primeng/calendar";
 
 const routes: Routes = [{path: 'home', component: HomepageComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -54,9 +56,12 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     MDBBootstrapModule.forRoot(),
     MatExpansionModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

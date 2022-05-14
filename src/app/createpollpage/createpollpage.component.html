@@ -4,6 +4,8 @@
 <p>Title Poll: <input #title></p>
 <p>Description: </p>
 <p><input #description></p>
+   <!-- <p-calendar [(ngModel)]="value"></p-calendar> -->
+    <p-calendar [inline]="true" [showWeek]="true"></p-calendar>
     <button mat-raised-button (click)="createPoll(title.value, description.value)">Create poll</button>
   </form>
 </div>
