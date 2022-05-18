@@ -1,11 +1,11 @@
 <app-navbar></app-navbar>
-<div style="margin: 20px">
+<body class="body">
+<div class="div">
   <form>
-<p>Title Poll: <input #title></p>
-<p>Description: </p>
-<p><input #description></p>
-   <!-- <p-calendar [(ngModel)]="value"></p-calendar> -->
-    <p-calendar [inline]="true" [showWeek]="true"></p-calendar>
+    <p>Title Poll: <input placeholder="Title" #title></p>
+    <p>Description: </p>
+    <p><textarea  class="longInput input" rows="3" cols="50" #description></textarea></p>
     <button mat-raised-button (click)="createPoll(title.value, description.value)">Create poll</button>
   </form>
 </div>
+</body>

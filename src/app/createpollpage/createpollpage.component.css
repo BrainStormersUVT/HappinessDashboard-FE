@@ -1,0 +1,25 @@
+p {
+  color: #FF7700
+}
+input {
+  background-color: #2b487a;
+}
+
+textarea {
+  color: #E04D01;
+  background-color: #2b487a;
+}
+
+button {
+  color: #FF7700;
+  background-color: #2A2550;
+
+}
+
+div {
+  padding: 20px;
+}
+
+body {
+  background-color: #251D3A
+}

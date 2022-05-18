@@ -1,20 +1,24 @@
 <app-navbar></app-navbar>
-<div style="margin: 100px; padding: 100px">
-<h1>{{poll?.title}}</h1>
-<h2>created by {{poll?.creator}}</h2>
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Description
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  {{poll?.description}}
-</mat-expansion-panel>
+<body>
+<div class="all">
+  <h1>{{poll?.title}}</h1>
+  <h2>created by {{poll?.creator}}</h2>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Description
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    {{poll?.description}}
+  </mat-expansion-panel>
 
-<form>
-  <p>Sad <mat-slider max="10" min="1" step="1" thumbLabel="true"></mat-slider> Happy</p>
-<p>Comment:</p>
-  <input>
-  <p><button mat-raised-button (click)="vote(1)" >Vote!</button></p>
-</form>
+  <form>
+    <p class="slider">😟 <mat-slider  class="mat-slider md-slider" max="10" min="1" step="1" thumbLabel="true"></mat-slider> 😀</p>
+    <div class="centered">
+    <p class="comment">Comment:</p>
+      <textarea  class="longInput input" rows="3" cols="50" placeholder="Optional"></textarea>
+      <p><button mat-raised-button (click)="vote(1)" >Vote!</button></p>
+    </div>
+  </form>
 </div>
+</body>

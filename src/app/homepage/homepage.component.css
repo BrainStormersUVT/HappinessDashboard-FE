@@ -9,3 +9,62 @@
   0 1px 3px 0 rgba(0,0,0,1);
 }
 
+.button_polls {
+  alignment: center;
+  border-radius: 15px;
+  border: 1px solid #FF7700;
+  color: #FFF;
+  cursor: pointer;
+  padding: 5px 13px;
+  outline: none;
+  font-size: 16px;
+  width: 750px;
+  height: 100px;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+button.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body {
+  background-color: #251D3A;
+}
+
+span.title{
+  color: #FF7700;
+  text-align: center;
+  font-size: 25px;
+}
+
+span.creator{
+  color: #FF7700;
+  text-align: left;
+  font-size: 20px;
+}
+
+span.description{
+  color: #FF7700;
+  text-align: left;
+  font-size: 20px;
+}
+
+button {
+alignment: center;
+background-color: #2A2550;
+}
+
+div.cards {
+  text-align: center;
+  margin: 25px;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  color: #FF7700;
+}

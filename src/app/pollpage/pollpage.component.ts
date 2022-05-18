@@ -23,14 +23,10 @@ export class PollpageComponent implements OnInit {
     if (typeof this.id === "string") {
       this.pollService.findPollById(parseInt(this.id)).subscribe(
         (response: Poll) => {
-          if(response!=null){
           this.poll = response;
-          }else {
-            this.poll= new Poll(1, "", "", "", "");
-          }
         },
         (error: HttpErrorResponse) => {
-          alert(error.message);
+          this.router.navigate(['/error', {error:error.message}])
         }
       )
     }

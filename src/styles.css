@@ -1,4 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #251D3A
+}
+
+.mat-slider-thumb {
+  background-color: #E04D01 !important;
+}
+
+.mat-slider-thumb-label {
+  background-color: #FF7700 !important;
+}
+
+.mat-slider-track-fill {
+  background-color: #FF7700 !important;
+}
+
+.mat-slider-horizontal .mat-slider-ticks-container {
+  height: 8px !important;
+  top: -3px !important;
+}
+
+.mat-slider-horizontal .mat-slider-ticks {
+  height: 8px !important;
+}

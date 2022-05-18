@@ -22,6 +22,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import {ChartModule} from "primeng/chart";
 import {CalendarModule} from "primeng/calendar";
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [{path: 'home', component: HomepageComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,7 +30,8 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
   {path:'votes', component:VotespageComponent},
   {path:'addpoll', component:CreatepollpageComponent},
   {path:'login', component:LoginComponent},
-  {path:'register', component:RegisterComponent}
+  {path:'register', component:RegisterComponent},
+  {path:'error', component:ErrorComponent}
   ];
 
 @NgModule({
@@ -42,6 +44,7 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     RegisterComponent,
     LoginComponent,
     NavbarComponent,
+    ErrorComponent,
 
   ],
   imports: [

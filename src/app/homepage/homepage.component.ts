@@ -24,7 +24,7 @@ export class HomepageComponent implements OnInit {
         this.latestPolls = response;
       },
       (error: HttpErrorResponse) => {
-        alert(error.message);
+        this.router.navigate(['/error', {error:error.message}])
       }
     )
   }
