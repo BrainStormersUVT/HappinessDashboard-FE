@@ -1,14 +1,14 @@
 <app-navbar></app-navbar>
 <div style="margin: 100px; padding: 100px">
-<h1>{{poll.title}}</h1>
-<h2>created by {{poll.creator}}</h2>
+<h1>{{poll?.title}}</h1>
+<h2>created by {{poll?.creator}}</h2>
 <mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
       Description
     </mat-panel-title>
   </mat-expansion-panel-header>
-  {{poll.description}}
+  {{poll?.description}}
 </mat-expansion-panel>
 
 <form>
