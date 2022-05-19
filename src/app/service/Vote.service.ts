@@ -11,8 +11,13 @@ export class VoteService {
   constructor(private http: HttpClient) {
   }
 
-  public addVote(Vote: Vote): Observable<Vote> {
-    return this.http.post<Vote>(this.apiServerUrl + '/vote/add', Vote)
+  public addVote(poll_id: string | null | undefined, grade: number, comment: string, datetime: string): Observable<Vote> {
+    return this.http.post<any>(this.apiServerUrl + '/vote/add', {
+      "poll_id": poll_id,
+      "grade": grade,
+      "comment": comment,
+      "datetime": datetime
+    })
   }
 
   public updateVote(Vote: Vote): Observable<Vote> {
@@ -24,7 +29,7 @@ export class VoteService {
   }
 
   public deleteVoteById(id: number): Observable<void> {
-    return this.http.get<void>('${this.apiServerUrl}/vote/delete/' + id)
+    return this.http.get<void>(this.apiServerUrl + '/vote/delete/' + id)
   }
 
 }

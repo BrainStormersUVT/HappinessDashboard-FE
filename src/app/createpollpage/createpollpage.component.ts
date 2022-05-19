@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-
-
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+import {Poll} from "../classes/Poll";
+import {HttpErrorResponse} from "@angular/common/http";
+import {PollService} from "../service/Poll.service";
 
 @Component({
   selector: 'app-createpollpage',
@@ -8,14 +10,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./createpollpage.component.css']
 })
 export class CreatepollpageComponent implements OnInit {
-
-  constructor() {
+  constructor(private router: Router, private pollService: PollService) {
   }
 
   ngOnInit(): void {
 
   }
-createPoll(title: string, description:string){
-console.log("Title: "+title+"\nDescription:"+description)
-}
+
+  public createPoll(title: string, description: string): void {
+    let now = new Date()
+    this.pollService.addPoll(title, description, now.toISOString(), 0).subscribe(
+      (response: Poll) => {
+        this.router.navigate(['/poll', {id: response.id}])
+      },
+      (error: HttpErrorResponse) => {
+        this.router.navigate(['/error', {error: error.message}])
+      }
+    )
+  }
 }

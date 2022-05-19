@@ -8,12 +8,12 @@
 
 <h1>Latest Polls</h1>
 
-  <div class="cards" *ngFor="let poll of latestPolls">
-    <button class="button_polls margin-auto truncate"  (click)="goToPoll(poll.id)">
-      <span class="title">{{poll.title}}</span><br/>
-      <span class="creator">by {{poll.creator}}</span><br/>
-      <span class="description">{{poll.description}}</span>
-    </button>
-  </div>
+<div class="cards" *ngFor="let poll of latestPolls">
+  <button class="button_polls margin-auto truncate" (click)="goToPoll(poll.id)">
+    <span class="title">{{poll.title}}</span><br/>
+    <span class="creator">by {{poll.creator}}</span><br/>
+    <span class="description">{{poll.description}}</span>
+  </button>
+</div>
 
 </body>

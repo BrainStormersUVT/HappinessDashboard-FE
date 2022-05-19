@@ -3,10 +3,11 @@
   margin: 30px;
   border: black;
 }
+
 .mat-card:not([class*=mat-elevation-z]) {
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,1),
-  0 1px 1px 0 rgba(0,0,0,1),
-  0 1px 3px 0 rgba(0,0,0,1);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 1),
+  0 1px 1px 0 rgba(0, 0, 0, 1),
+  0 1px 3px 0 rgba(0, 0, 0, 1);
 }
 
 .button_polls {
@@ -36,33 +37,34 @@ body {
   background-color: #251D3A;
 }
 
-span.title{
+span.title {
   color: #FF7700;
   text-align: center;
   font-size: 25px;
 }
 
-span.creator{
+span.creator {
   color: #FF7700;
   text-align: left;
   font-size: 20px;
 }
 
-span.description{
+span.description {
   color: #FF7700;
   text-align: left;
   font-size: 20px;
 }
 
 button {
-alignment: center;
-background-color: #2A2550;
+  alignment: center;
+  background-color: #2A2550;
 }
 
 div.cards {
   text-align: center;
   margin: 25px;
 }
+
 h1 {
   display: flex;
   justify-content: center;

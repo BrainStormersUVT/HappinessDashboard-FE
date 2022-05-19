@@ -1,19 +1,19 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
-import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { PollpageComponent } from './pollpage/pollpage.component';
-import { VotespageComponent } from './votespage/votespage.component';
-import { CreatepollpageComponent } from './createpollpage/createpollpage.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component'
+import {RouterModule, Routes} from '@angular/router';
+import {HomepageComponent} from './homepage/homepage.component';
+import {PollpageComponent} from './pollpage/pollpage.component';
+import {VotespageComponent} from './votespage/votespage.component';
+import {CreatepollpageComponent} from './createpollpage/createpollpage.component';
+import {RegisterComponent} from './register/register.component';
+import {LoginComponent} from './login/login.component'
 import {MatSliderModule} from "@angular/material/slider";
-import { NavbarComponent } from './navbar/navbar.component';
+import {NavbarComponent} from './navbar/navbar.component';
 import {PaginatorModule} from "primeng/paginator";
 import {AutoCompleteModule} from "primeng/autocomplete";
 import {MDBBootstrapModule} from "angular-bootstrap-md";
@@ -22,17 +22,17 @@ import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import {ChartModule} from "primeng/chart";
 import {CalendarModule} from "primeng/calendar";
-import { ErrorComponent } from './error/error.component';
+import {ErrorComponent} from './error/error.component';
 
 const routes: Routes = [{path: 'home', component: HomepageComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'poll', component: PollpageComponent},
-  {path:'votes', component:VotespageComponent},
-  {path:'addpoll', component:CreatepollpageComponent},
-  {path:'login', component:LoginComponent},
-  {path:'register', component:RegisterComponent},
-  {path:'error', component:ErrorComponent}
-  ];
+  {path: 'votes', component: VotespageComponent},
+  {path: 'addpoll', component: CreatepollpageComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'error', component: ErrorComponent}
+];
 
 @NgModule({
   declarations: [
@@ -66,5 +66,6 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
 

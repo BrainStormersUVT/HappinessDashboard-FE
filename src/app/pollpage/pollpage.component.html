@@ -13,11 +13,16 @@
   </mat-expansion-panel>
 
   <form>
-    <p class="slider">😟 <mat-slider  class="mat-slider md-slider" max="10" min="1" step="1" thumbLabel="true"></mat-slider> 😀</p>
+    <p class="slider">😟
+      <mat-slider class="mat-slider md-slider" max="10" min="1" step="1" thumbLabel="true"></mat-slider>
+      😀
+    </p>
     <div class="centered">
-    <p class="comment">Comment:</p>
-      <textarea  class="longInput input" rows="3" cols="50" placeholder="Optional"></textarea>
-      <p><button mat-raised-button (click)="vote(1)" >Vote!</button></p>
+      <p class="comment">Comment:</p>
+      <textarea class="longInput input" rows="3" cols="50" placeholder="Optional"></textarea>
+      <p>
+        <button mat-raised-button (click)="vote(1)">Vote!</button>
+      </p>
     </div>
   </form>
 </div>

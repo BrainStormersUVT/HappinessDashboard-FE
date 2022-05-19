@@ -11,11 +11,17 @@ export class PollService {
   constructor(private http: HttpClient) {
   }
 
-  public addPoll(poll: Poll): Observable<Poll> {
-    return this.http.post<Poll>(this.apiServerUrl + '/poll/add', poll);
+  public addPoll(title: string, description: string, date: string, creator_id: number): Observable<Poll> {
+    return this.http.post<any>(this.apiServerUrl + '/poll/add', {
+      "title": title,
+      "description": description,
+      "date": date,
+      "creator_id": creator_id
+    });
   }
 
   public updatePoll(poll: Poll): Observable<Poll> {
+
     return this.http.put<Poll>(this.apiServerUrl + '/poll/update', poll);
   }
 

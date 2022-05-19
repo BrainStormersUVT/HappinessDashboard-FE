@@ -1,6 +1,7 @@
 p {
   color: #FF7700
 }
+
 input {
   background-color: #2b487a;
 }
@@ -22,4 +23,8 @@ div {
 
 body {
   background-color: #251D3A
+}
+
+input {
+  color: #E04D01;
 }
