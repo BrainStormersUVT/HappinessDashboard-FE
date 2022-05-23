@@ -25,7 +25,7 @@ export class PollService {
     return this.http.put<Poll>(this.apiServerUrl + '/poll/update', poll);
   }
 
-  public findPollById(id: number): Observable<Poll> {
+  public findPollById(id: number | undefined): Observable<Poll> {
     return this.http.get<Poll>(this.apiServerUrl + '/poll/find/' + id);
   }
 

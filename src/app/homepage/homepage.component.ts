@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Poll} from "../classes/Poll";
 import {Router} from "@angular/router";
 import {PollService} from "../service/Poll.service";
-import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-homepage',
@@ -20,12 +19,9 @@ export class HomepageComponent implements OnInit {
 
   public getListOfPools(): void {
     this.pollService.getListOfPools().subscribe(
-      (response: Poll[]) => {
+      (response) => {
         this.latestPolls = response;
       },
-      (error: HttpErrorResponse) => {
-        this.router.navigate(['/error', {error: error.message}])
-      }
     )
   }
 
@@ -33,7 +29,7 @@ export class HomepageComponent implements OnInit {
   }
 
   goToPoll(id: any) {
-    this.router.navigate(['/poll', {id: id}])
+    this.router.navigate(['/poll', id])
   }
 
   goToPollAdd() {

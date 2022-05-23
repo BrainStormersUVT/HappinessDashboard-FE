@@ -9,7 +9,7 @@ import {Vote} from "../classes/Vote";
 })
 export class VotespageComponent implements OnInit {
   votes: Vote[] | undefined
-  id: string | null | undefined
+  id: number | undefined
   basicData: any;
 
   constructor(private arouter: ActivatedRoute) {
@@ -17,8 +17,7 @@ export class VotespageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = this.arouter.snapshot.paramMap.get('id');
-    this.votes = this.getVotes(this.id)
+    this.id = Number(this.arouter.snapshot.paramMap.get('id'))
     this.basicData = {
       labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
       datasets: [
@@ -31,7 +30,7 @@ export class VotespageComponent implements OnInit {
     };
   }
 
-  getVotes(id: string | null) {
+  getVotes(id: number) {
     //TODO get votes from DB
     return [new Vote(0, 2, "", "2020", 23, 1)]
   }

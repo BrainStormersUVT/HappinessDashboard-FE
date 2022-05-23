@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {Poll} from "../classes/Poll";
-import {HttpErrorResponse} from "@angular/common/http";
 import {PollService} from "../service/Poll.service";
 
 @Component({
@@ -21,10 +20,7 @@ export class CreatepollpageComponent implements OnInit {
     let now = new Date()
     this.pollService.addPoll(title, description, now.toISOString(), 0).subscribe(
       (response: Poll) => {
-        this.router.navigate(['/poll', {id: response.id}])
-      },
-      (error: HttpErrorResponse) => {
-        this.router.navigate(['/error', {error: error.message}])
+        this.router.navigate(['/poll', response])
       }
     )
   }
