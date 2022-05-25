@@ -22,6 +22,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import {ChartModule} from "primeng/chart";
 import {CalendarModule} from "primeng/calendar";
+import {UserAuth} from "./classes/user-auth.service";
 
 const routes: Routes = [{path: 'home', component: HomepageComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -58,9 +59,9 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     MatIconModule,
     HttpClientModule,
     ChartModule,
-    CalendarModule
+    CalendarModule,
   ],
-  providers: [],
+  providers: [UserAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule {

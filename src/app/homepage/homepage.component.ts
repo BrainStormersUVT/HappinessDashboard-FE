@@ -32,7 +32,4 @@ export class HomepageComponent implements OnInit {
     this.router.navigate(['/poll', id])
   }
 
-  goToPollAdd() {
-    this.router.navigate(['/addpoll'])
-  }
 }

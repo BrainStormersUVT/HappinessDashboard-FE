@@ -11,13 +11,11 @@ export class VoteService {
   constructor(private http: HttpClient) {
   }
 
-  public addVote(poll_id: number | undefined, grade: number, comment: string, datetime: string): Observable<Vote> {
-    return this.http.post<any>(this.apiServerUrl + '/vote/add', {
-      "poll_id": poll_id,
+  public addVote(pollId: number | undefined, grade: number, comment: string, datetime: string, userId: number): Observable<Vote> {
+    return this.http.post<any>(this.apiServerUrl + '/vote/add/' + userId + '/' + pollId, {
       "grade": grade,
       "comment": comment,
       "datetime": datetime,
-      "user_id":2,
     })
   }
 

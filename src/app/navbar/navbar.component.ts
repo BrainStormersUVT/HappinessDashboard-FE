@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {UserAuth} from "../classes/user-auth.service";
 
 @Component({
   selector: 'app-navbar',
@@ -8,15 +9,29 @@ import {Router} from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
 
-  user: string = "USER"
+  username: string | undefined
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private user: UserAuth) {
   }
 
   ngOnInit(): void {
+    if (this.user.getUsername() != null) {
+      this.username = this.user.getUsername()
+    } else {
+      this.username = "USER"
+    }
   }
 
   goToPollAdd() {
     this.router.navigate(['/addpoll'])
+  }
+
+  goToHome() {
+    this.router.navigate(['/home'])
+  }
+
+  logOut() {
+    this.user.setAll(null, null, null, null)
+    this.goToHome()
   }
 }

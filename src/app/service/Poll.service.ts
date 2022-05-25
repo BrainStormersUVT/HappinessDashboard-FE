@@ -12,11 +12,10 @@ export class PollService {
   }
 
   public addPoll(title: string, description: string, date: string, creator_id: number): Observable<Poll> {
-    return this.http.post<any>(this.apiServerUrl + '/poll/add', {
+    return this.http.post<any>(this.apiServerUrl + '/poll/add/' + creator_id, {
       "title": title,
       "description": description,
       "date": date,
-      "creator_id": creator_id
     });
   }
 
