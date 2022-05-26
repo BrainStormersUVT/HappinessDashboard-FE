@@ -23,6 +23,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {ChartModule} from "primeng/chart";
 import {CalendarModule} from "primeng/calendar";
 import {UserAuth} from "./classes/user-auth.service";
+import {CreatorpageComponent} from './creatorpage/creatorpage.component';
 
 const routes: Routes = [{path: 'home', component: HomepageComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -43,6 +44,7 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     RegisterComponent,
     LoginComponent,
     NavbarComponent,
+    CreatorpageComponent,
 
   ],
   imports: [

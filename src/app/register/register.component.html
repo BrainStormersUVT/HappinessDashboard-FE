@@ -2,8 +2,8 @@
 <div style="margin: 20px">
   <form>
     <p>Username: <input #username></p>
-    <p>Password: <input #password></p>
-    <p>Email: <input #email></p>
+    <p>Password: <input type="password" #password></p>
+    <p>Email: <input type="email" #email></p>
     <button mat-raised-button (click)="register(username.value, password.value, email.value)">Register</button>
   </form>
 </div>

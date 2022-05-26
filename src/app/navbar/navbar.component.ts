@@ -32,6 +32,6 @@ export class NavbarComponent implements OnInit {
 
   logOut() {
     this.user.setAll(null, null, null, null)
-    this.goToHome()
+    window.location.reload()
   }
 }

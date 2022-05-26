@@ -3,6 +3,7 @@
 <div class="all">
   <h1>{{poll?.title}}</h1>
   <h2>created by {{poll?.creator}}</h2>
+  <button (click)="copyToCb('http://localhost:4200/poll/'+poll?.id)">Copy link</button>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -14,14 +15,14 @@
 
   <form>
     <p class="slider">😟
-      <mat-slider class="mat-slider md-slider" max="10" min="1" step="1" thumbLabel="true"></mat-slider>
+      <mat-slider class="mat-slider md-slider" max="10" min="1" step="1" thumbLabel="true" #slider></mat-slider>
       😀
     </p>
     <div class="centered">
       <p class="comment">Comment:</p>
-      <textarea class="longInput input" rows="3" cols="50" placeholder="Optional"></textarea>
+      <textarea class="longInput input" rows="3" cols="50" placeholder="Optional" #comment></textarea>
       <p>
-        <button mat-raised-button (click)="vote(1)">Vote!</button>
+        <button mat-raised-button (click)="vote(slider.value, comment.value)">Vote!</button>
       </p>
     </div>
   </form>

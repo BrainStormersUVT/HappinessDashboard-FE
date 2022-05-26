@@ -23,8 +23,12 @@ export class VoteService {
     return this.http.put<Vote>(this.apiServerUrl + '/vote/update', Vote)
   }
 
-  public findVoteByPollId(id: number): Observable<Vote> {
-    return this.http.get<Vote>(this.apiServerUrl + '/vote/find/' + id)
+  public findVoteByPollId(id: number): Observable<Vote[]> {
+    return this.http.get<Vote[]>(this.apiServerUrl + '/vote/find/' + id)
+  }
+
+  public findGradesByPollId(id: number): Observable<number[]> {
+    return this.http.get<number[]>(this.apiServerUrl + '/vote/' + id + '/getGrades')
   }
 
   public deleteVoteById(id: number): Observable<void> {

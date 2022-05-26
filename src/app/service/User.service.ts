@@ -27,6 +27,14 @@ export class UserService {
     return this.http.get<User>(this.apiServerUrl + '/user/checkIfUserExists/' + username + '/' + password)
   }
 
+  public checkIfUserVoted(idPoll: number | undefined, username: string): Observable<Boolean> {
+    return this.http.get<Boolean>(this.apiServerUrl + '/user/checkIfUserVoted/' + idPoll + '/' + username)
+  }
+
+  public checkIfUserIsCreator(idPoll: number | undefined, username: string): Observable<Boolean> {
+    return this.http.get<Boolean>(this.apiServerUrl + '/user/checkIfUserIsCreator/' + idPoll + '/' + username)
+  }
+
   public deleteUserById(id: number): Observable<void> {
     return this.http.get<void>(this.apiServerUrl + '/user/delete/' + id)
   }

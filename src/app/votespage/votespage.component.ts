@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Vote} from "../classes/Vote";
+import {VoteService} from "../service/Vote.service";
 
 @Component({
   selector: 'app-votespage',
@@ -8,30 +8,32 @@ import {Vote} from "../classes/Vote";
   styleUrls: ['./votespage.component.css']
 })
 export class VotespageComponent implements OnInit {
-  votes: Vote[] | undefined
   id: number | undefined
   basicData: any;
 
-  constructor(private arouter: ActivatedRoute) {
+  constructor(private arouter: ActivatedRoute, private voteService: VoteService) {
 
   }
 
   ngOnInit(): void {
     this.id = Number(this.arouter.snapshot.paramMap.get('id'))
-    this.basicData = {
-      labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
-      datasets: [
-        {
-          label: 'Votes',
-          backgroundColor: '#42A5F5',
-          data: [65, 59, 80, 81, 56, 55, 40, 100, 20, 100]
-        },
-      ]
-    };
+    this.getGrades(this.id)
   }
 
-  getVotes(id: number) {
-    //TODO get votes from DB
-    return [new Vote(0, 2, "", "2020", 23, 1)]
+  getGrades(id: number) {
+    this.voteService.findGradesByPollId(id).subscribe(
+      (response) => {
+        this.basicData = {
+          labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+          datasets: [
+            {
+              label: 'Votes',
+              backgroundColor: '#42A5F5',
+              data: response
+            },
+          ]
+        }
+      }
+    )
   }
 }
