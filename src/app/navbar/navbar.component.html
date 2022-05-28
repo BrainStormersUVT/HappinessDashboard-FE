@@ -11,7 +11,8 @@
 
     <form class="form-inline waves-light" mdbWavesEffect>
       <div class="md-form my-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search poll">
+        <input (keyup.enter)="search(text.value)" class="form-control mr-sm-2" type="text" placeholder="Search poll"
+               #text>
       </div>
     </form>
 
@@ -19,12 +20,13 @@
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light">
           <mdb-icon fas icon="user"></mdb-icon>
-          {{username}}<span class="caret"></span></a>
+          {{title}}<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect (click)="goToPollAdd()">Create poll</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
-          <div class="divider dropdown-divider"></div>
-          <a class="dropdown-item waves-light" mdbWavesEffect (click)="logOut()">Log out</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect (click)="controlOp1()">{{op1}}</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect (click)="controlOp2()">{{op2}}</a>
+          <div [hidden]="status">
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item waves-light" mdbWavesEffect (click)="controlOp3()">{{op3}}</a></div>
         </div>
       </li>
     </ul>

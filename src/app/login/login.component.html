@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
-<div style="margin: 20px">
+<body>
+<div>
   <p>{{error}}</p>
   <form>
     <p>Username: <input #username></p>
@@ -7,3 +8,4 @@
     <button mat-raised-button (click)="login(username.value, password.value)">Login</button>
   </form>
 </div>
+</body>

@@ -24,6 +24,8 @@ import {ChartModule} from "primeng/chart";
 import {CalendarModule} from "primeng/calendar";
 import {UserAuth} from "./classes/user-auth.service";
 import {CreatorpageComponent} from './creatorpage/creatorpage.component';
+import {DownloadService} from "./service/Download.service";
+import {SearchComponent} from './search/search.component';
 
 const routes: Routes = [{path: 'home', component: HomepageComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -32,6 +34,8 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
   {path: 'addpoll', component: CreatepollpageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'userpolls/:id', component: CreatorpageComponent},
+  {path: 'search/:title', component: SearchComponent}
 ];
 
 @NgModule({
@@ -45,6 +49,7 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     LoginComponent,
     NavbarComponent,
     CreatorpageComponent,
+    SearchComponent,
 
   ],
   imports: [
@@ -63,7 +68,7 @@ const routes: Routes = [{path: 'home', component: HomepageComponent},
     ChartModule,
     CalendarModule,
   ],
-  providers: [UserAuth],
+  providers: [UserAuth, DownloadService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -10,6 +10,16 @@ import {VoteService} from "../service/Vote.service";
 export class VotespageComponent implements OnInit {
   id: number | undefined
   basicData: any;
+  options = {
+    responsive: false,
+    maintainAspectRatio: false,
+    legend: {
+      display: true,
+      title: {
+        fontColor: '#FF7700'
+      }
+    }
+  };
 
   constructor(private arouter: ActivatedRoute, private voteService: VoteService) {
 

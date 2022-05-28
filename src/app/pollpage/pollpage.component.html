@@ -3,10 +3,10 @@
 <div class="all">
   <h1>{{poll?.title}}</h1>
   <h2>created by {{poll?.creator}}</h2>
-  <button (click)="copyToCb('http://localhost:4200/poll/'+poll?.id)">Copy link</button>
+  <button mat-raised-button (click)="copyToCb('http://localhost:4200/poll/'+poll?.id)">Copy link</button>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
-      <mat-panel-title>
+      <mat-panel-title class="test">
         Description
       </mat-panel-title>
     </mat-expansion-panel-header>

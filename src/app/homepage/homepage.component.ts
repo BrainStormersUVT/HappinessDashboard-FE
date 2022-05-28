@@ -13,7 +13,6 @@ export class HomepageComponent implements OnInit {
     this.getListOfPools();
   }
 
-  title = "Homepage";
   latestPolls: Poll[] | undefined;
 
 

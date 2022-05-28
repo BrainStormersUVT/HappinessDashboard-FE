@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<body>
+
+<h1>Polls created by {{username}}</h1>
+
+<div class="cards" *ngFor="let poll of polls">
+  <button class="button_polls margin-auto truncate" (click)="download(poll.id)">
+    <span class="title">{{poll.title}}</span><br/>
+    <span class="creator">by {{poll.creator}}</span><br/>
+    <span class="description">{{poll.description}}</span>
+  </button>
+</div>
+
+</body>

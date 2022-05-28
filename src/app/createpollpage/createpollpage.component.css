@@ -19,6 +19,10 @@ button {
 
 div {
   padding: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 body {
@@ -27,4 +31,8 @@ body {
 
 input {
   color: #E04D01;
+}
+
+center-align {
+  text-align: center;
 }

@@ -40,4 +40,11 @@ export class PollService {
     return this.http.get<void>(this.apiServerUrl + '/poll/delete/' + id)
   }
 
+  public getPollsByUsername(username: string | undefined): Observable<Poll[]> {
+    return this.http.get<Poll[]>(this.apiServerUrl + '/poll/getPolls/' + username)
+  }
+
+  public search(title: string | null | undefined): Observable<Poll[]> {
+    return this.http.get<Poll[]>(this.apiServerUrl + '/poll/getPollsWithTitleLike/' + title)
+  }
 }

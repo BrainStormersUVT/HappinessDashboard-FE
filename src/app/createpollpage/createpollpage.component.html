@@ -1,11 +1,14 @@
 <app-navbar></app-navbar>
-<body class="body">
-<div class="div">
+<body>
+<div>
   <form>
-    <p>Title Poll: <input placeholder="Title" #title></p>
+    <p>Title:</p>
+    <p><input placeholder="Title" #title></p>
     <p>Description: </p>
     <p><textarea class="longInput input" rows="3" cols="50" #description></textarea></p>
-    <button mat-raised-button (click)="createPoll(title.value, description.value)">Create poll</button>
+    <p>
+      <button mat-raised-button (click)="createPoll(title.value, description.value)">Create poll</button>
+    </p>
   </form>
 </div>
 </body>

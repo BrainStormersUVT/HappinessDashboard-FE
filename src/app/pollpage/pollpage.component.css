@@ -14,10 +14,10 @@ md-slider .md-track-ticks canvas {
 
 body {
   background-color: #251D3A;
+  font-size: 14px;
 }
 
 div.all {
-
   padding: 100px;
 }
 
@@ -31,17 +31,19 @@ h2 {
 
 mat-expansion-panel {
   margin: 1px;
-  color: #2A2550;
-  background-color: #FF7700;
+  background-color: #2A2550;
+  color: #E04D01;
 }
 
 mat-expansion-panel-header {
   background-color: #2A2550;
+  color: #2A2550;
 }
 
 mat-panel-title {
   color: #E04D01;
   background-color: #2A2550;
+
 }
 
 p.slider {
@@ -63,7 +65,9 @@ textarea {
 button {
   color: #2A2550;
   background-color: #FF7700;
+  alignment: center;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 div.centered {
